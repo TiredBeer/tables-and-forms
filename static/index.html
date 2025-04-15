@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
@@ -9,7 +9,61 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+        <label>
+            Имя питомца:
+            <input type="text" name="name" placeholder="Барсик" value="Барсик" required>
+        </label><br><br>
+
+        <label>
+            Тип питомца:
+            <select name="petType" required>
+                <option value="cat">Кошка</option>
+                <option value="dog">Собака</option>
+                <option value="tiger">Тигр</option>
+            </select>
+        </label><br><br>
+
+        <label>
+            Пол питомца:<br>
+            <input type="radio" name="gender" value="boy" required> Мальчик<br>
+            <input type="radio" name="gender" value="girl"> Девочка
+            <input type="radio" name="gender" value="none"> Ка-52 «Аллигатор» (по кодификации НАТО — Hokum B) — российский разведывательно-ударный вертолёт
+        </label><br><br>
+
+        <label>
+            Цвет глаз:
+            <input type="text" name="eyeColor" placeholder="Зелёный" value="Зелёный" required>
+        </label><br><br>
+
+        <label>
+            Длина хвоста (в см):
+            <input type="number" name="tailLength" value="15" min="0" required>
+        </label><br><br>
+
+        <label>
+            Дата рождения:
+            <input type="date" name="dateOfBirth" value="2023-01-01" required>
+        </label><br><br>
+
+        <label>
+            Email:
+            <input type="email" name="email" placeholder="you@example.com" required>
+        </label><br><br>
+
+        <label>
+            Телефон:
+            <input type="tel" name="phone" placeholder="+7-900-000-00-00" required>
+        </label><br><br>
+
+        <label>
+            <input type="checkbox" name="rules" required>
+            Я согласен с правилами
+        </label><br><br>
+
+        <button type="submit">Отправить</button>
+        <button type="reset">Сбросить</button>
+    </form>
 
 </main>
 </body>
